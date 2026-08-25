@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>MealsNMoney | Eat Better. Spend Smarter.</title>
+<meta name="description" content="Eat Better. Spend Smarter. Download free on Google Play.">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="48x48" href="./mealsnmoney_favicon_48x48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./mealsnmoney_logo_300x300.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="MealsNMoney | Eat Better. Spend Smarter.">
+<meta property="og:description" content="Healthy Eating, Without Breaking the Budget. Download MealsNMoney free on Google Play.">
+<meta property="og:url" content="https://www.mealsnmoney.com/">
+<meta property="og:image" content="https://www.mealsnmoney.com/mealsnmoney_logo_300x300.png">
+
+<style>
+:root{
+  --teal:#00b7b7;
+  --navy:#263648;
+  --ink:#333;
+  --muted:#5c6b7a;
+  --bg-soft:#f6f9fb;
+  --card-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  color:var(--ink);
+  line-height:1.6;
+}
+
+/* ---------- Top Navbar ---------- */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255, 255, 255, 0.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid #e5e9ec;
+  padding:12px 24px;
+}
+.nav-container{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+}
+.nav-logo{
+  height:44px;
+  width:auto;
+  max-width:240px;
+  object-fit:contain;
+  display:block;
+}
+.nav-cta{
+  background:var(--teal);
+  color:#fff;
+  text-decoration:none;
+  padding:8px 18px;
+  border-radius:6px;
+  font-size:0.9rem;
+  font-weight:600;
+  transition:background 0.2s ease;
+}
+.nav-cta:hover{background:#009b9b;}
+
+/* ---------- Hero ---------- */
+.hero{
+  min-height:80vh;
+  background:
+    linear-gradient(rgba(0,0,0,.06), rgba(0,0,0,.12)),
+    linear-gradient(135deg, #2cc5c5 0%, #369cb2 47%, #3a5670 100%);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px 80px;
+  text-shadow:0 1px 2px rgba(0,0,0,.15);
+}
+
+.hero-inner{max-width:820px;}
+
+.hero-logo-badge{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  margin:0 auto 24px;
+  display:block;
+  object-fit:contain;
+  background:#fff;
+}
+
+.hero h1{
+  font-size:3rem;
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:1.15rem;
+  margin-bottom:16px;
+  color:#f3fbfb;
+}
+
+.hero-tagline{
+  margin:28px auto 0;
+  max-width:620px;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.30);
+  font-size:1.18rem;
+  font-weight:600;
+}
+
+/* ---------- Download & Features ---------- */
+.section{padding:70px 20px;text-align:center;}
+.section-alt{background:var(--bg-soft);}
+.container{max-width:1000px;margin:0 auto;}
+.section h2{font-size:2rem;font-weight:600;margin-bottom:18px;color:var(--navy);}
+
+.download{padding:48px 20px 70px;text-align:center;}
+.store-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.store-btn{
+  display:inline-flex;align-items:center;gap:14px;background:#000;color:#fff;
+  text-decoration:none;padding:12px 26px;border-radius:8px;border:1px solid #a6a6a6;transition:.25s;
+}
+.store-btn:hover{background:#151515;transform:translateY(-1px);}
+.store-btn svg{width:27px;height:27px;flex:none;}
+.store-btn .label{text-align:left;line-height:1.1;}
+.store-btn .small{display:block;font-size:.7rem;opacity:.85;letter-spacing:.5px;text-transform:uppercase;}
+.store-btn .big{display:block;font-size:1.25rem;font-weight:bold;}
+.store-note{margin-top:14px;font-size:.9rem;color:var(--muted);}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin-top:46px;text-align:left;}
+.feature-card{background:#fff;padding:30px;border-radius:12px;box-shadow:var(--card-shadow);border-top:4px solid var(--teal);}
+.feature-card h3{font-size:1.2rem;color:var(--navy);margin-bottom:14px;}
+.feature-card ul{list-style:none;}
+.feature-card li{position:relative;padding-left:26px;margin-bottom:10px;}
+.feature-card li::before{content:"\2713";position:absolute;left:0;color:var(--teal);font-weight:bold;}
+
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;margin-top:46px;}
+.card{background:#fff;padding:34px 26px;border-radius:12px;box-shadow:var(--card-shadow);}
+.card h3{font-size:1.35rem;margin-bottom:12px;color:var(--navy);}
+.card p{color:var(--muted);}
+
+/* ---------- Footer ---------- */
+.footer{
+  background:
+    linear-gradient(rgba(0,0,0,.06), rgba(0,0,0,.12)),
+    linear-gradient(135deg, #2cc5c5 0%, #369cb2 47%, #3a5670 100%);
+  color:#ffffff;
+  padding:32px 24px;
+  font-size:0.9rem;
+  text-shadow:0 1px 2px rgba(0,0,0,.15);
+}
+.footer-container{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:16px;
+}
+.footer-copyright{margin:0;color:rgba(255,255,255,0.95);}
+.footer-links{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+.footer-links a{color:rgba(255,255,255,0.9);text-decoration:none;transition:all 0.2s ease;}
+.footer-links a:hover{color:#ffffff;text-decoration:underline;}
+
+@media(max-width:768px){
+  .hero{min-height:auto;padding:60px 22px;}
+  .hero h1{font-size:2.2rem;}
+  .hero p{font-size:1.05rem;}
+  .hero-logo-badge{width:90px;height:90px;}
+  .footer-container{flex-direction:column;text-align:center;gap:14px;}
+  .footer-links{justify-content:center;gap:16px;}
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <img src="./mealsnmoney_logo.png" alt="MealsNMoney Logo" class="nav-logo">
+    </a>
+    <a href="#download" class="nav-cta">Get App</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <img src="./mealsnmoney_logo_300x300.png" alt="MealsNMoney Icon" class="hero-logo-badge">
+    <h1>Welcome to Meals &amp; Money</h1>
+    <p>MealsNMoney helps people reach their nutrition goals by creating personalized food and grocery plans that fit their diet preferences and budget.</p>
+    <p>Set your calorie goal, choose how you want to eat, set your weekly food budget, and let MealsNMoney build your personalized grocery and meal plan.</p>
+    <p class="hero-tagline">MealsNMoney — Where nutrition meets affordability.</p>
+  </div>
+</header>
+
+<!-- DOWNLOAD 
+<section id="download" class="download">
+  <div class="store-buttons">
+    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.eventsnpeeps.event_management" target="_blank" rel="noopener">
+      <svg viewBox="0 0 46 46" aria-hidden="true">
+        <polygon fill="#00c3ff" points="6,4 23,13.5 23,23 6,23"/>
+        <polygon fill="#ffce00" points="23,13.5 40,23 23,23"/>
+        <polygon fill="#00e676" points="6,42 23,32.5 23,23 6,23"/>
+        <polygon fill="#ff424b" points="23,32.5 40,23 23,23"/>
+      </svg>
+      <span class="label">
+        <span class="small">Get it on</span>
+        <span class="big">Google Play</span>
+      </span>
+    </a>
+  </div>
+  <p class="store-note">Free to download on Google Play.</p>
+</section>
+-->
+
+<!-- FEATURES -->
+<section class="section section-alt">
+  <div class="container">
+    <h2>Smart Nutrition on a Real-World Budget</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>&#129383; Calorie &amp; Macro Alignment</h3>
+        <ul>
+          <li>Set precise calorie and macronutrient targets</li>
+          <li>Choose from vegan, vegetarian, or balanced meal plans</li>
+          <li>Auto-adjust grocery plans as your health goals evolve</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <h3>&#128722; Budget-First Grocery Lists</h3>
+        <ul>
+          <li>Generate organized grocery lists based on budget limits</li>
+          <li>Minimize food waste with smart ingredient overlap</li>
+          <li>Track weekly grocery spending against your targets</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <h3>&#129370; Pantry Optimization</h3>
+        <ul>
+          <li>Build custom recipes from items in your pantry</li>
+          <li>Discover affordable, high-nutrition meal alternatives</li>
+          <li>Plan complete weekly meal schedules in minutes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="section">
+  <div class="container">
+    <div class="pillars">
+      <div class="card">
+        <h3>&#127919; Plan</h3>
+        <p>Set custom calorie and budget targets that match your lifestyle.</p>
+      </div>
+      <div class="card">
+        <h3>&#128717;&#65039; Save</h3>
+        <p>Generate smart shopping lists designed to reduce grocery costs.</p>
+      </div>
+      <div class="card">
+        <h3>&#127822; Thrive</h3>
+        <p>Eat healthier without overspending on meal subscriptions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <p class="footer-copyright">&copy; 2026 Thirty Seven Labs Inc. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="termsofservice.html">Terms of Service</a>
+      <a href="privacypolicy.html">Privacy Policy</a>
+      <a href="mailto:support@mealsnmoney.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
