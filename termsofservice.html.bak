@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | MealsNMoney</title>
+  <meta name="description" content="MealsNMoney Terms of Service - Terms and conditions governing platform usage.">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="48x48" href="./mealsnmoney_favicon_48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./mealsnmoney_logo_300x300.png">
+
+  <style>
+    :root {
+      --teal: #00b7b7;
+      --navy: #263648;
+      --ink: #334155;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      line-height: 1.7;
+      background:
+        linear-gradient(rgba(0,0,0,.04), rgba(0,0,0,.08)),
+        linear-gradient(135deg, #2cc5c5 0%, #369cb2 47%, #3a5670 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* ---------- Top Navbar ---------- */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e5e9ec;
+      padding: 12px 24px;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .nav-logo {
+      height: 44px;
+      width: auto;
+      max-width: 240px;
+      object-fit: contain;
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover { color: var(--navy); }
+    .nav-cta {
+      background: var(--teal);
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+    .nav-cta:hover { background: #009b9b; }
+
+    /* ---------- Policy Container Card ---------- */
+    .policy-wrapper {
+      flex: 1;
+      padding: 50px 20px;
+    }
+    .policy-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    .policy-header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .policy-container h1 {
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .policy-updated {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .policy-container h2 {
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 1.35rem;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+    .policy-container p {
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+    .policy-container ul {
+      margin-left: 24px;
+      margin-bottom: 18px;
+    }
+    .policy-container li {
+      margin-bottom: 6px;
+    }
+    .contact-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 16px;
+      font-size: 0.95rem;
+    }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      background:
+        linear-gradient(rgba(0,0,0,.06), rgba(0,0,0,.12)),
+        linear-gradient(135deg, #2cc5c5 0%, #369cb2 47%, #3a5670 100%);
+      color: #ffffff;
+      padding: 32px 24px;
+      font-size: 0.9rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,.15);
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copyright { margin: 0; color: rgba(255,255,255,0.95); }
+    .footer-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.2s ease; }
+    .footer-links a:hover { color: #ffffff; text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .policy-wrapper { padding: 30px 14px; }
+      .policy-container { padding: 26px 20px; }
+      .policy-container h1 { font-size: 1.7rem; }
+      .nav-logo { height: 36px; }
+      .footer-container { flex-direction: column; text-align: center; gap: 14px; }
+      .footer-links { justify-content: center; gap: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="./mealsnmoney_logo.png" alt="MealsNMoney Logo" class="nav-logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#download" class="nav-cta">Get App</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Card -->
+  <main class="policy-wrapper">
+    <div class="policy-container">
+      
+      <div class="policy-header">
+        <h1>MealsNMoney Terms of Service</h1>
+        <div class="policy-updated">Last Updated: August 2nd, 2026</div>
+      </div>
+
+      <h2>1. Introduction</h2>
+      <p>Welcome to MealsNMoney, a nutrition and budget planning platform operated by Thirty Seven Labs Inc., a Delaware corporation (“Company”, “we”, “us”, or “our”).</p>
+      <p>These Terms of Service (“Terms”) govern your access to and use of the MealsNMoney website, mobile applications, and related meal planning tools (collectively, the “Service”).</p>
+      <p>By accessing or using the Service, you agree to these Terms. If you do not agree, you may not use the Service.</p>
+
+      <h2>2. Nutritional Disclaimer</h2>
+      <p>MealsNMoney provides automated nutritional estimates and meal budgeting recommendations for informational purposes only. The Service does not provide medical or clinical dietary advice. Users with severe allergies or medical dietary conditions should consult a certified healthcare professional.</p>
+
+      <h2>3. User Accounts & Subscriptions</h2>
+      <p>To access custom meal schedules and budget tracking tools, you must maintain an accurate account. Subscriptions auto-renew through Google Play Billing or Stripe depending on platform.</p>
+	  
+	  <h2>4. User Conduct</h2>
+      <p>You agree not to upload unlawful or offensive content, attempt unauthorized access to the platform, or use the Service for illegal activities. We reserve the right to suspend or terminate accounts that violate these Terms.</p>
+
+      <h2>5. Content Removal and Enforcement</h2>
+      <p>Thirty Seven Labs Inc. and MealsNMoney reserve the right, but not the obligation, to review, monitor, remove, disable access to, or restrict any User Content at any time, with or without notice, for any reason, including alleged violations of law, intellectual property claims, safety concerns, fraud, or violations of these Terms.</p>
+      <p>We may also suspend or terminate accounts of users who repeatedly violate intellectual property rights or otherwise engage in prohibited conduct.</p>
+      <p>We may preserve or disclose User Content and account information if required to comply with applicable law, legal process, governmental requests, enforce these Terms, investigate violations, detect fraud or security issues.</p>
+	  
+	  <h2>6. User Content</h2>
+      <p>The Service may allow users to upload, submit, post, transmit, display, or otherwise make available content.</p>
+      <p>Users retain ownership of their User Content. However, by submitting or posting User Content through the Service, you grant Thirty Seven Labs Inc. and MealsNMoney a non-exclusive, worldwide, royalty-free, sublicensable, transferable license to host, store, reproduce, display, distribute, modify, adapt, publish, and use such User Content solely for the purpose of operating, improving, promoting, and providing the Service.</p>
+      <p>You represent and warrant that you own or have all necessary rights to the User Content you submit, your User Content does not infringe any third-party intellectual property, privacy, publicity, or contractual rights, and your User Content does not violate any applicable law or these Terms.</p>
+	  
+	  <h2>7. Paid Memberships</h2>
+      <p>Some features of the Service may require paid subscriptions. By purchasing a subscription you agree that payments may automatically renew, fees may change with prior notice, and refunds may be limited unless required by law.</p>
+      <p>Payments may be processed through third-party providers such as Stripe. On iOS devices, subscriptions are processed through Apple's in-app purchase system and auto-renew unless canceled at least 24 hours before the end of the current period. On Android devices, payments may be processed through Google Play Billing. You can manage or cancel subscriptions in your App Store or Google Play account settings.</p>
+
+      <h2>10. Intellectual Property</h2>
+      <p>All platform software, branding, and design elements are owned by Thirty Seven Labs Inc. or its licensors. You may not reproduce, distribute, or reverse engineer the Service without permission.</p>
+
+      <h2>7. Contact Information</h2>
+      <div class="contact-card">
+        <strong>Thirty Seven Labs Inc.</strong><br>
+        1111B S Governors Ave STE 81485<br>
+        Dover, DE 19904<br>
+        United States<br><br>
+        Email: <a href="mailto:support@mealsnmoney.com" style="color: var(--teal); text-decoration: none; font-weight: 600;">support@mealsnmoney.com</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-copyright">&copy; 2026 Thirty Seven Labs Inc. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="termsofservice.html">Terms of Service</a>
+        <a href="privacypolicy.html">Privacy Policy</a>
+        <a href="mailto:support@mealsnmoney.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
