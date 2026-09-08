@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Your Account | MealsNMoney</title>
+  <meta name="description" content="How to delete your MealsNMoney account and what happens to your data.">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="48x48" href="./mealsnmoney_favicon_48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./mealsnmoney_logo_300x300.png">
+
+  <style>
+    :root {
+      --teal: #00b7b7;
+      --navy: #263648;
+      --ink: #334155;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      line-height: 1.7;
+      background:
+        linear-gradient(rgba(0,0,0,.04), rgba(0,0,0,.08)),
+        linear-gradient(135deg, #2cc5c5 0%, #369cb2 47%, #3a5670 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* ---------- Top Navbar ---------- */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e5e9ec;
+      padding: 12px 24px;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .nav-logo {
+      height: 44px;
+      width: auto;
+      max-width: 240px;
+      object-fit: contain;
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover { color: var(--navy); }
+    .nav-cta {
+      background: var(--teal);
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+    .nav-cta:hover { background: #009b9b; }
+
+    /* ---------- Policy Container Card ---------- */
+    .policy-wrapper {
+      flex: 1;
+      padding: 50px 20px;
+    }
+    .policy-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    .policy-header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .policy-container h1 {
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .policy-updated {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .policy-container h2 {
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 1.35rem;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+    .policy-container h3 {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    .policy-container p {
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+    .policy-container ul {
+      margin-left: 24px;
+      margin-bottom: 18px;
+    }
+    .policy-container li {
+      margin-bottom: 6px;
+    }
+    .contact-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 16px;
+      font-size: 0.95rem;
+    }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      background:
+        linear-gradient(rgba(0,0,0,.06), rgba(0,0,0,.12)),
+        linear-gradient(135deg, #2cc5c5 0%, #369cb2 47%, #3a5670 100%);
+      color: #ffffff;
+      padding: 32px 24px;
+      font-size: 0.9rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,.15);
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copyright { margin: 0; color: rgba(255,255,255,0.95); }
+    .footer-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.2s ease; }
+    .footer-links a:hover { color: #ffffff; text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .policy-wrapper { padding: 30px 14px; }
+      .policy-container { padding: 26px 20px; }
+      .policy-container h1 { font-size: 1.7rem; }
+      .nav-logo { height: 36px; }
+      .footer-container { flex-direction: column; text-align: center; gap: 14px; }
+      .footer-links { justify-content: center; gap: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="./mealsnmoney_logo.png" alt="MealsNMoney Logo" class="nav-logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#download" class="nav-cta">Get App</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Card -->
+  <main class="policy-wrapper">
+    <div class="policy-container">
+
+      <div class="policy-header">
+        <h1>Delete Your MealsNMoney Account</h1>
+        <div class="policy-updated">Last Updated: September 08th, 2026</div>
+      </div>
+
+      <p>MealsNMoney is published by Thirty Seven Labs Inc. This page explains how to delete your
+      account and exactly what happens to your data when you do.</p>
+
+      <h2>Delete your account in the app</h2>
+      <ol>
+        <li>Open MealsNMoney and sign in.</li>
+        <li>Tap the account menu in the top right.</li>
+        <li>Select <strong>My profile</strong>.</li>
+        <li>Choose <strong>Delete account</strong>.</li>
+        <li>Read the confirmation message and confirm.</li>
+      </ol>
+      <p>Your account is deleted immediately.</p>
+
+      <h2>If you cannot sign in</h2>
+      <p>Email <a href="mailto:support@mealsnmoney.com" style="color: var(--teal);">support@mealsnmoney.com</a>
+      from the email address on your account and ask us to delete it. We do this within 30 days.</p>
+
+      <h2>What is deleted</h2>
+      <p>We remove all of the following from our live systems immediately:</p>
+      <ul>
+        <li>your profile, including your email address, ZIP code, diet preferences and food allergies</li>
+        <li>your food and nutrition entries, and any calories-burned entries</li>
+        <li>your calorie targets and weekly food budgets</li>
+        <li>your grocery lists</li>
+        <li>your spending records and the itemized lines from any receipt you scanned</li>
+        <li>and your sign-in account itself</li>
+      </ul>
+      <p>We also instruct our analytics provider and our subscription management provider to delete
+      the records they hold against your account identifier. We do this within 30 days of the
+      deletion.</p>
+
+      <h2>What is kept, and for how long</h2>
+      <p>We keep only what we are required to keep for legal, security, or compliance obligations.
+      That is a record of your acceptance of our Terms of Service and Privacy Policy, and of any
+      arbitration opt-out you sent us. Those records include your email address and the name you
+      entered, and are kept for six years after your account closes.</p>
+      <p>Copies of deleted data may remain in our routine encrypted backups for up to 35 days. They
+      are not restored to live systems and are overwritten on the ordinary backup cycle.</p>
+
+      <h2>Your subscription</h2>
+      <p>Deleting your account does not cancel a paid subscription. Subscriptions are billed by
+      Google Play or by Apple, and you cancel them in your Google Play or App Store account
+      settings. We cannot cancel a subscription for you or issue a refund.</p>
+
+      <h2>Contact Information</h2>
+      <div class="contact-card">
+        <strong>Thirty Seven Labs Inc.</strong><br>
+        1111B S Governors Ave STE 81485<br>
+        Dover, DE 19904<br>
+        United States<br>
+        support@mealsnmoney.com
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-copyright">&copy; 2026 Thirty Seven Labs Inc. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="termsofservice.html">Terms of Service</a>
+        <a href="privacypolicy.html">Privacy Policy</a>
+        <a href="consumerhealthpolicy.html">Consumer Health Data</a>
+        <a href="mailto:support@mealsnmoney.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
